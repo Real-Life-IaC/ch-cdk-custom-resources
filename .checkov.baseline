@@ -1,0 +1,22 @@
+{
+    "failed_checks": [
+        {
+            "file": "/StackAwsCustomResource.template.json",
+            "findings": [
+                {
+                    "resource": "AWS::IAM::Policy.ContainerInsightsCustomResourcePolicy724BE5CD",
+                    "check_ids": [
+                        "CKV_AWS_111"
+                    ]
+                },
+                {
+                    "resource": "AWS::Lambda::Function.AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+                    "check_ids": [
+                        "CKV_AWS_115",
+                        "CKV_AWS_117"
+                    ]
+                }
+            ]
+        }
+    ]
+}
