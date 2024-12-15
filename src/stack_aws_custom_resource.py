@@ -19,9 +19,10 @@ class StackAwsCustomResource(cdk.Stack):
             id="ComputeEnvironment",
             vpc=ec2.Vpc.from_lookup(
                 scope=self,
-                id="VPC",
+                id="Vpc",
                 vpc_id=ssm.StringParameter.value_from_lookup(
-                    scope=self, parameter_name="/platform/vpc/id"
+                    scope=self,
+                    parameter_name="/platform/vpc/id",
                 ),
             ),
         )
