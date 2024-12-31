@@ -14,12 +14,8 @@ def lambda_handler(event: dict, context: dict) -> dict:
 
     request_type = event["RequestType"]
     databricks_resource = event["ResourceProperties"]["DatabricksResource"]
-    databricks_resource_name = event["ResourceProperties"][
-        "DatabricksResourceName"
-    ]
-    databricks_bucket_name = event["ResourceProperties"][
-        "DatabricksBucketName"
-    ]
+    databricks_resource_name = event["ResourceProperties"]["DatabricksResourceName"]
+    databricks_bucket_name = event["ResourceProperties"]["DatabricksBucketName"]
 
     # Note that we need to create an account in Databricks
     # and then create this secret in the Secrets Manager before running the stack
